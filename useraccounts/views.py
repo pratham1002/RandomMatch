@@ -27,16 +27,16 @@ def GetUserData(request):
         return render(request,'Login.html',{"userdata":userdata})
 
     else:
-        #random_number=random.randint(1,9999)
+        random_number=random.randint(1,9999)
 
-        #userdata.verification_code=random_number
-        #userdata.save()
+        userdata.verification_code=random_number
+        userdata.save()
 
-        #subject = 'Welcome to MySite'
-        #message = 'Here is your login code ' + str(random_number)
-        #recepient=userdata.email
+        subject = 'Welcome to MySite'
+        message = 'Here is your login code ' + str(random_number)
+        recepient=userdata.email
 
-        #send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently = False)
+        send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently = False)
 
         return render(request, 'SignUp.html', {"userdata":userdata})
 
