@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{{message}}
+
+You have logged in {{userdata.name}} ! <br>
+
+Do You Wish To participate this week? Current status = {{userdata.participate_request}}
+<form action="Change_participation" method="POST">
+    {% csrf_token %}
+    <input type="radio" name="preference" value="True"> Yes <br>
+    <input type="radio" name="preference" value="False"> No <br>
+    <button type="submit" name="email" value="{{userdata.email}}">Submit</button>
+</form><br>
+
+Assigned Location:{{userdata.assigned_place}} <br>
+
+<a href="Logout">Logout</a>
+
+{% else %}
+
+You are not Logged in
+
+{% endif %}
+
+{% endblock %}

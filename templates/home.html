@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{message}}
+<h1>Welcome to RandomMatch</h1>
+<form action="GetUserID" method="GET">
+Enter your ID : <br> 
+    <select name="fhp">
+        <option value="f">f</option>
+        <option value="h">h</option>
+        <option value="p">p</option>
+    </select>
+    <select name="year">
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+    </select>
+    <input type="number" name="roll_no" min="1" max="1500" placeholder="XXXX"> 
+    <br>
+    <input type="submit">
+</form>
+<br>
+<a href="PopulateData">Populate Data</a>
+<a href="MatchUsers">Match Users</a>
+{% endblock %}

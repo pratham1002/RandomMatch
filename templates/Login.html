@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Hello {{userdata.name}} Please Enter your Password
+<br>
+{{message}} 
+<br>
+<form action="FindUser" method="POST">
+    {% csrf_token %}
+    Enter Password : <br> <input type="password" name="password">
+    <br>
+    <button name="email" type="submit" value="{{userdata.email}}">Submit</button>
+</form>
+{% endblock %}
