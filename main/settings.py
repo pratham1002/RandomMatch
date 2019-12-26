@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u*^vbignq_#caps9rl*kw-x9g^f73yzxa7+th)mi+gnojp!kr_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['bitspilanirandommatch.herokuapp.com']
 
